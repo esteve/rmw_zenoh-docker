@@ -27,3 +27,4 @@ RUN apt-get update && apt-get install -y \
     ssh \
     usbutils \
     vim
+RUN apt-get update && apt-get -yd upgrade && apt-get -y upgrade
