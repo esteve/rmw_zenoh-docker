@@ -9,16 +9,21 @@ RUN apt-get update && apt-get install -y \
     clang-tidy \
     curl \
     flex \
+    gdb \
     less \
     libasio-dev \
     libcurl4-openssl-dev \
     liblog4cxx-dev \
     libncurses5-dev \
+    lldb \
     llvm \
     python3-pip \
     ros-foxy-demo-nodes-cpp \
     ros-foxy-osrf-testing-tools-cpp \
+    ros-foxy-rcl-dbgsym \
+    ros-foxy-rosidl-runtime-c-dbgsym \
     ros-foxy-test-interface-files \
     ros-foxy-test-msgs \
     ssh \
-    usbutils
+    usbutils \
+    vim
