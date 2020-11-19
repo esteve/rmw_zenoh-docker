@@ -97,3 +97,7 @@ RUN apt-get update && apt-get install -y \
     usbutils \
     vim
 RUN apt-get update && apt-get -yd upgrade && apt-get -y upgrade
+RUN apt-get update && apt-get install -y \
+    valgrind
+RUN echo "deb [trusted=yes] https://download.eclipse.org/zenoh/zenoh/master/ /" | sudo tee -a /etc/apt/sources.list.d/zenoh.list
+RUN apt-get update && apt-get install -y zenoh
