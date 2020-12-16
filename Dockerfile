@@ -99,5 +99,10 @@ RUN apt-get update && apt-get install -y \
 RUN apt-get update && apt-get -yd upgrade && apt-get -y upgrade
 RUN apt-get update && apt-get install -y \
     valgrind
-RUN echo "deb [trusted=yes] https://download.eclipse.org/zenoh/zenoh/master/ /" | sudo tee -a /etc/apt/sources.list.d/zenoh.list
+RUN echo "deb [trusted=yes] https://download.eclipse.org/zenoh/zenoh/latest/ /" | sudo tee -a /etc/apt/sources.list.d/zenoh.list
 RUN apt-get update && apt-get install -y zenoh
+RUN curl -Lo /tmp/ecal.deb https://github.com/continental/ecal/releases/download/v5.7.5/ecal_5.7.5-focal_amd64.deb
+RUN apt-get update && apt-get install --no-install-recommends -y \
+    libprotobuf-dev \
+    protobuf-compiler
+RUN apt-get update && apt-get install -y /tmp/ecal.deb
